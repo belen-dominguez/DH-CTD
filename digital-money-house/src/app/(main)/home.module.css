@@ -1,0 +1,42 @@
+.home {
+  position: relative;
+}
+
+.home .footerBackground {
+  @apply bg-colorYellow;
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  bottom: -6%;
+  border-radius: 20px;
+}
+
+.cardWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @apply px-[18px];
+  @apply lg:px-[50px];
+}
+
+@media screen and (min-width: 834px) {
+  .home .footerBackground {
+    height: 40%;
+    border-radius: 30px;
+  }
+
+  .cardWrapper {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home .footerBackground {
+    height: 30%;
+  }
+  .cardWrapper {
+    flex-direction: row;
+    gap: 13px;
+  }
+}
