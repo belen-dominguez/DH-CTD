@@ -7,7 +7,7 @@ const MENU_LINKS = [
   {
     href: "/login",
     label: "Iniciar sesion",
-    hasBackground: true,
+    selectedTheme: "darkGrey",
   },
 ];
 

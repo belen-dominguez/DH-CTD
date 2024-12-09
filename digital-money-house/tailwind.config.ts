@@ -21,6 +21,7 @@ export default {
         colorBlack: "#181818",
         colorWhite: "#E3DFCF",
         colorRed: "#EE3838",
+        colorLightGrey: "#CECECE",
       },
     },
   },

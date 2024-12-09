@@ -18,12 +18,12 @@ const MENU_LINKS = [
   {
     href: "/login",
     label: "Ingresar",
-    hasBackground: false,
+    selectedTheme: "black",
   },
   {
     href: "/register",
     label: "Crear cuenta",
-    hasBackground: true,
+    selectedTheme: "green",
   },
 ];
 
