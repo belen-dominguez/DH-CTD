@@ -15,7 +15,10 @@ const AuthLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en">
       <body className="auth-body">
-        <Header menuLinks={MENU_LINKS} />
+        <Header
+          menuLinks={MENU_LINKS}
+          classnames="bg-colorYellow text-colorGrey"
+        />
         <main>{children}</main>
         <Footer />
       </body>

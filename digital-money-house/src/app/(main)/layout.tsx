@@ -35,7 +35,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${archivo.className}  antialiased`}>
-        <Header menuLinks={MENU_LINKS} />
+        <Header
+          menuLinks={MENU_LINKS}
+          classnames="bg-colorGrey text-colorYellow"
+        />
         <main>{children}</main>
         <Footer />
       </body>

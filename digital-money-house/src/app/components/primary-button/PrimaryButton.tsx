@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-type PrimaryButtonProps = {
+export type PrimaryButtonProps = {
   label: string;
   href: string;
   hasBackground: boolean;
