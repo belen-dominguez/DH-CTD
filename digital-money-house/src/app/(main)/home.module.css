@@ -40,3 +40,9 @@
     gap: 13px;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .home {
+    height: 85vh;
+  }
+}

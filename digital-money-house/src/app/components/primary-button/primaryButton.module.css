@@ -1,0 +1,22 @@
+.primaryButtonWrapper.green,
+.primaryButtonWrapper.black,
+.primaryButtonWrapper.darkGrey,
+.primaryButtonWrapper.grey {
+  transition: all 0.3s ease;
+}
+
+.primaryButtonWrapper.green:hover {
+  @apply text-colorYellow bg-colorBlack;
+}
+
+.primaryButtonWrapper.black:hover {
+  @apply text-colorGrey bg-colorYellow  border-colorGrey;
+}
+
+.primaryButtonWrapper.darkGrey:hover {
+  @apply text-colorGrey bg-transparent;
+}
+
+.primaryButtonWrapper.grey:hover {
+  @apply text-colorLightGrey bg-colorBlack;
+}

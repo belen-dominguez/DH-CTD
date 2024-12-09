@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import styles from "./primaryButton.module.css";
 
 export type PrimaryButtonProps = {
   label: string;
@@ -13,18 +14,20 @@ export const PrimaryButton = ({
   selectedTheme,
 }: PrimaryButtonProps) => {
   const themes = {
-    green: `bg-colorYellow text-colorBlack`,
-    black: `bg-colorGrey text-colorYellow border-2 border-colorYellow`,
-    grey: `bg-colorLightGrey text-colorBlack`,
-    darkGrey: `bg-colorGrey text-white`,
+    green: `bg-colorYellow text-colorBlack ${styles.green}`,
+    black: `bg-colorGrey text-colorYellow border-2 border-colorYellow ${styles.black}`,
+    grey: `bg-colorLightGrey text-colorBlack ${styles.grey}`,
+    darkGrey: `bg-colorGrey text-white border-2 border-colorGrey ${styles.darkGrey}`,
   };
   return (
     <div
       className={`rounded-md p-[14px] lg:p-[10px] button-small ${
         themes[selectedTheme as keyof typeof themes]
-      }`}
+      } ${styles.primaryButtonWrapper}`}
     >
-      <Link href={href}>{label}</Link>
+      <Link href={href} className={styles.anchor}>
+        {label}
+      </Link>
     </div>
   );
 };
