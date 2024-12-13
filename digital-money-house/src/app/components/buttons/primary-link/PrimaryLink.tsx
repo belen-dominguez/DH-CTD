@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { ReactNode } from "react";
 import styles from "./primaryLink.module.css";
 
 export type PrimaryLinkProps = {
@@ -8,6 +8,7 @@ export type PrimaryLinkProps = {
   selectedTheme: string;
   hidden?: boolean;
   classNames?: string;
+  children?: ReactNode;
 };
 
 export const PrimaryLink = ({
@@ -16,6 +17,7 @@ export const PrimaryLink = ({
   selectedTheme,
   hidden,
   classNames,
+  children,
 }: PrimaryLinkProps) => {
   const themes = {
     green: `bg-colorYellow text-colorBlack ${styles.green}`,
@@ -26,13 +28,14 @@ export const PrimaryLink = ({
   return (
     <Link
       href={href}
-      className={`rounded-md p-[14px] lg:p-[10px] button-small ${
+      className={`rounded-md p-[14px] lg:p-[10px] ${
         themes[selectedTheme as keyof typeof themes]
       } ${styles.primaryLinkWrapper} ${
         hidden ? styles.hidden : ""
-      } ${classNames}`}
+      } ${classNames} `}
     >
       <div className={styles.anchor}>{label}</div>
+      {children}
     </Link>
   );
 };

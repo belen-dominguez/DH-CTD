@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import {
   PrimaryLink,
   PrimaryLinkProps,
@@ -46,15 +48,27 @@ const SIDEBAR_LINKS = [
 ];
 
 export const Sidebar = ({ classNames }: SidebarProps) => {
+  const pathname = usePathname();
+  const [activeMenu, setActiveMenu] = useState("");
+
+  useEffect(() => {
+    setActiveMenu(pathname);
+  }, [pathname]);
+
   return (
     <div className={`${styles.sidebarWrapper} ${classNames}`}>
       <nav>
         <ul>
           {SIDEBAR_LINKS.map((link, index) => {
             return (
-              <li key={index}>
+              <li key={index} className={styles.linkItem}>
                 {link.href ? (
-                  <PrimaryLink {...(link as PrimaryLinkProps)} />
+                  <PrimaryLink
+                    {...(link as PrimaryLinkProps)}
+                    classNames={`button-small ${
+                      activeMenu === link.href ? styles.active : ""
+                    }`}
+                  />
                 ) : (
                   <PrimaryButton
                     {...(link as PrimaryButtonProps)}

@@ -2,6 +2,14 @@
   display: none;
 }
 
+.sidebarWrapper .linkItem div {
+  font-weight: 500;
+}
+
+.sidebarWrapper .linkItem .active div {
+  font-weight: 800;
+}
+
 @media screen and (min-width: 834px) {
   .sidebarWrapper {
     display: block;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Summary } from "../../components/summary/Summary";
+import { Summary } from "../../components/summaryCards/summary/Summary";
 import { Activity } from "../../components/activity/Activity";
 import { PrimaryLink } from "../../components/buttons/primary-link/PrimaryLink";
 import { ActivityItem } from "../../types/transaction.types";
@@ -50,7 +50,7 @@ export default function Inicio() {
         <Summary moneyAvailable={moneyAvailable} />
         <div className="flex flex-col lg:flex-row gap-[5px] mt-[10px]">
           {LINKS.map((link, index) => (
-            <PrimaryLink key={index} {...link} />
+            <PrimaryLink key={index} {...link} classNames="button-small" />
           ))}
         </div>
         <Activity activityList={activityList} />

@@ -48,7 +48,10 @@ export const Header = ({ menuLinks, classnames }: HeaderProps) => {
           <ul className="flex justify-between gap-5">
             {menuLinks.map((link) => (
               <li key={link.href}>
-                <PrimaryLink {...(link as PrimaryLinkProps)} />
+                <PrimaryLink
+                  {...(link as PrimaryLinkProps)}
+                  classNames="button-small"
+                />
               </li>
             ))}
           </ul>

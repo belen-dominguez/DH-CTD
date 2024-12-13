@@ -50,6 +50,7 @@ export default function Login() {
             label="Crear cuenta"
             href="/register"
             selectedTheme="grey"
+            classNames=" button-small "
           />
         </form>
       </div>

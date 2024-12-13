@@ -1,0 +1,25 @@
+.cardSummaryWrapper {
+  color: white;
+  padding: 22px 22px;
+}
+
+.cardSummaryWrapper .yellowText {
+  margin-bottom: 5px;
+  @apply text-colorYellow;
+}
+
+.cardSummaryWrapper .description {
+  margin-bottom: 20px;
+}
+
+.cardSummaryWrapper .accountItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 834px) {
+  .cardSummaryWrapper {
+    padding: 22px 32px;
+  }
+}
