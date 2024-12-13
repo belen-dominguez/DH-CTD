@@ -1,0 +1,45 @@
+.activityCardWrapper {
+  border-top: 1px solid currentColor;
+  padding: 11px 0;
+  display: flex;
+  justify-content: space-between;
+  @apply border-colorWhite-var1;
+}
+
+.activityCardWrapper .detailWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.activityCardWrapper .dot {
+  display: inline-block;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  @apply bg-colorYellow;
+}
+
+.activityCardWrapper .sumWrapper .date {
+  text-align: right;
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 834px) {
+  .activityCardWrapper {
+    padding: 23px 0;
+  }
+
+  .activityCardWrapper .dot {
+    width: 32px;
+    height: 32px;
+  }
+
+  .activityCardWrapper .sumWrapper .date {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}

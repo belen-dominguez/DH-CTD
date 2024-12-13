@@ -1,0 +1,26 @@
+.primaryLinkWrapper.green,
+.primaryLinkWrapper.black,
+.primaryLinkWrapper.darkGrey,
+.primaryLinkWrapper.grey {
+  transition: all 0.3s ease;
+}
+
+.primaryLinkWrapper.green:hover {
+  @apply text-colorYellow bg-colorBlack;
+}
+
+.primaryLinkWrapper.black:hover {
+  @apply text-colorGrey bg-colorYellow  border-colorGrey;
+}
+
+.primaryLinkWrapper.darkGrey:hover {
+  @apply text-colorGrey bg-transparent;
+}
+
+.primaryLinkWrapper.grey:hover {
+  @apply text-colorLightGrey bg-colorBlack;
+}
+
+.primaryLinkWrapper.hidden {
+  display: none;
+}

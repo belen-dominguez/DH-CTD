@@ -1,17 +1,20 @@
-import Link from "next/link";
 import React from "react";
 import styles from "./primaryButton.module.css";
 
 export type PrimaryButtonProps = {
   label: string;
-  href: string;
-  selectedTheme: string;
+  selectedTheme?: string;
+  onClick?: () => void;
+  type: "button" | "submit" | "reset" | undefined;
+  className?: string;
 };
 
 export const PrimaryButton = ({
   label,
-  href,
+  type = "button",
   selectedTheme,
+  onClick,
+  className,
 }: PrimaryButtonProps) => {
   const themes = {
     green: `bg-colorYellow text-colorBlack ${styles.green}`,
@@ -23,11 +26,11 @@ export const PrimaryButton = ({
     <div
       className={`rounded-md p-[14px] lg:p-[10px] button-small ${
         themes[selectedTheme as keyof typeof themes]
-      } ${styles.primaryButtonWrapper}`}
+      } ${styles.primaryButtonWrapper} ${className}`}
     >
-      <Link href={href} className={styles.anchor}>
+      <button type={type} className={styles.button} onClick={onClick}>
         {label}
-      </Link>
+      </button>
     </div>
   );
 };

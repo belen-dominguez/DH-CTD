@@ -1,0 +1,19 @@
+.sidebarWrapper {
+  display: none;
+}
+
+@media screen and (min-width: 834px) {
+  .sidebarWrapper {
+    display: block;
+    width: 40%;
+    max-width: 221px;
+    @apply bg-colorYellow text-colorGrey-var1;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .sidebarWrapper {
+    max-width: 276px;
+  }
+}

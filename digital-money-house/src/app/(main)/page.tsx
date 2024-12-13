@@ -1,6 +1,6 @@
 import Image from "next/image";
 import heroBg from "../assets/hero-bg.jpeg";
-import { TextCards } from "../components/text-cards/TextCards";
+import { TextCards } from "../components/cards/text-cards/TextCards";
 import styles from "./home.module.css";
 
 const TEXT_CARDS = [

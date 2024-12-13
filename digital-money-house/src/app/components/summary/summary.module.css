@@ -1,0 +1,33 @@
+.summaryWrapper {
+  padding: 15px 23px 23px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  @apply bg-colorGrey-var1 text-white;
+}
+
+.summaryWrapper .anchorWrapper {
+  align-self: flex-end;
+}
+
+.summaryWrapper .anchorWrapper .anchors:first-child {
+  margin-right: 10px;
+}
+
+.summaryWrapper p {
+  margin-bottom: 10px;
+}
+
+.summaryWrapper .moneyDetail {
+  border: 2px solid;
+  border-radius: 100px;
+  width: max-content;
+  padding: 15px;
+  @apply border-colorYellow;
+}
+
+@media screen and (max-width: 834px) {
+  .summaryWrapper {
+    padding: 32px 60px 40px 30px;
+  }
+}

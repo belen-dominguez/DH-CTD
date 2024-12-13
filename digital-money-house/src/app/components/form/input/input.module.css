@@ -1,0 +1,20 @@
+.inputWrapper input {
+  padding: 14px 20px;
+  font-size: 16px;
+  line-height: 21px;
+  border-radius: 10px;
+  width: 100%;
+  @apply text-colorGrey-var1;
+}
+
+.inputWrapper input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 834px) {
+  .inputWrapper input {
+    padding: 20px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

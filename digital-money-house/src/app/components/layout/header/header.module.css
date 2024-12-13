@@ -1,0 +1,57 @@
+.headerWrapper .userInfoWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerWrapper .tag {
+  border-radius: 8px;
+  padding: 5px;
+  @apply bg-colorYellow text-colorGrey-var1;
+}
+.headerWrapper .userName {
+  display: none;
+}
+
+.headerWrapper .menuButton {
+  display: block;
+  z-index: 2;
+  cursor: pointer;
+  @apply text-colorYellow;
+}
+
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  @apply bg-colorYellow;
+}
+
+.mobileMenuNav {
+  display: block !important;
+}
+
+.mobileMenuNav ul li div {
+  padding-left: 34px;
+}
+
+.mobileMenuNav ul li button {
+  width: max-content !important;
+}
+
+.mobileMenu .userName {
+  @apply text-colorYellow bg-colorGrey-var2;
+  display: block;
+  padding: 59px 70px 23px 34px;
+}
+
+@media screen and (min-width: 834px) {
+  .headerWrapper .menuIcons {
+    display: none;
+  }
+
+  .headerWrapper .userName {
+    display: block;
+  }
+}

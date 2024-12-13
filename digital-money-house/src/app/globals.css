@@ -54,8 +54,8 @@
 
   .text-large {
     font-size: 14px;
-    font-weight: 500;
-    line-height: 15.23px;
+    font-weight: 400;
+    line-height: 19px;
   }
 
   .text-error {
@@ -67,6 +67,26 @@
 
   .auth-body {
     @apply bg-colorBlack text-white;
+  }
+
+  .user-body {
+    @apply bg-colorWhite-var1 text-colorGrey-var1;
+  }
+
+  .sr-only {
+    clip-path: inset(50%);
+    block-size: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    inline-size: 1px;
+  }
+
+  @media screen and (max-width: 834px) {
+    .text-large {
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 }
 
